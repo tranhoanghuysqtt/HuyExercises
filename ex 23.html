@@ -1,0 +1,27 @@
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<script type="text/javascript">
+		function fibonaci(s)
+			{
+				if(s==0||s==1) return 1;
+				else
+					return (fibonaci(s-2)+fibonaci(s-1));
+			}
+		//test
+		
+		
+		document.write("7<br>");
+		fibonaci (7);
+		for (var i=0; i<7; i++) document.write(fibonaci(i)+' ');
+		document.write("<br>10<br>");
+		fibonaci (10);
+		for (var i=0; i<10; i++) document.write(fibonaci(i)+' ');
+		document.write("<br>20<br>");
+		fibonaci (20);
+		for (var i=0; i<20; i++) document.write(fibonaci(i)+' ');
+		</script>
+	</head>
+	<body>
+	</body>
+</html>
