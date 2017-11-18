@@ -1,0 +1,37 @@
+<html>
+	<head>
+		<script type="text/javascript">
+			//Create a Circle class that has 2 constructors: default (radius=1.0), init radius.
+			function Circle() 
+				{
+					this.radius = 1.0;
+					return this;
+				}
+			 Circle.prototype.initRadius = function(radius)
+				{
+					return this.radius = radius;
+				}
+			//Create ColorizedCircle class that has another constructor that take radius & color, this constructor should use the init radius contructor of Circle
+			function ColorizeCircle() 
+			{
+				this.radius = '';
+				this.color = '';
+				this.initColor = function(color) 
+				{
+				  this.color = color;
+				}
+				return this;
+			  }
+			ColorizeCircle.prototype = new Circle();
+
+			  //test
+			var c = new Circle();
+			c.initRadius(2);
+			var color = new ColorizeCircle();
+			document.write(color.initRadius(2));
+			document.write(color.radius);
+		</script>
+	</head>
+	<body>
+	</body>
+</html>
